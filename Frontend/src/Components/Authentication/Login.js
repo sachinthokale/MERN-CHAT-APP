@@ -19,11 +19,12 @@ const Login = () => {
 
     const navigate = useNavigate()
 
-    const showPassword = () => {
+    const showPassword = (e) => {
+        e.preventDefault()
         setShowpass(!shwopass);
     }
     const submitHandler = async (e) => {
-        // e.preventDefault();
+        e.preventDefault();
         setLoading(true)
         if (!email || !password || !confirmpass) {
 
@@ -89,6 +90,7 @@ const Login = () => {
                 progress: undefined,
                 theme: "dark",
             });
+            setLoading(false)
 
 
         }
@@ -101,30 +103,34 @@ const Login = () => {
 
 
                 <label htmlFor="">Email</label>
-                <input type="email" placeholder='Enter your Email'
+                <input value={email} type="email" placeholder='Enter your Email'
                     onChange={(e) => setEmail(e.target.value)}
                 />
 
                 <label htmlFor="">Password</label>
                 <div className="password">
-                    <input type={shwopass === true ? "text" : "password"} placeholder='Enter your Password'
+                    <input type={shwopass === true ? "text" : "password"}
+                        value={password} placeholder='Enter your Password'
                         onChange={(e) => setPassword(e.target.value)}
                     />
-                    <button onClick={showPassword}>show</button>
+                    <button onClick={(e) => showPassword(e)}>show</button>
                 </div>
 
                 <label htmlFor="">Confirm Password </label>
-                <div className="password">
+                <div className="password"
+                >
                     <input type={shwopass === true ? "text" : "password"} placeholder='Confirm Password'
-                        onChange={(e) => setConfirmpass(e.target.value)}
+                        value={confirmpass} onChange={(e) => setConfirmpass(e.target.value)}
                     />
                     <button onClick={showPassword}>show</button>
                 </div>
 
                 <Button onClick={submitHandler} isLoading={loading}>Login</Button>
-                <button onClick={() => {
+                <button onClick={(e) => {
+                    e.preventDefault()
                     setEmail("guest@example.com")
                     setPassword("123456")
+                    setConfirmpass("123456")
                 }}>Login as Guest</button>
 
             </form>

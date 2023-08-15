@@ -1,0 +1,27 @@
+.search-list {
+    border-bottom: 1.5px solid rgba(205, 200, 200, 0.454);
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    width: 100%;
+    height: 65px;
+    overflow: hidden;
+    margin-bottom: 5px;
+
+
+}
+
+.search-list:hover {
+    background-color: #f0f2f5;
+}
+
+.search-list>img {
+    width: 46px;
+    height: 46px;
+    margin-right: 10px;
+}
+
+.search-list>span {
+    margin-top: 23px;
+}

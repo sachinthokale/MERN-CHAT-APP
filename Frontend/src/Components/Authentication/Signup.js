@@ -76,7 +76,8 @@ const Signup = () => {
 
 
 
-    const showPassword = () => {
+    const showPassword = (e) => {
+        e.preventDefault()
         setShowpass(!shwopass);
     }
 
@@ -101,7 +102,7 @@ const Signup = () => {
         }
         if (password !== confirmpass) {
 
-            toast.error('🦄 Wow so easy!', {
+            toast.error('password and confirm password does not match', {
                 position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -143,7 +144,7 @@ const Signup = () => {
     }
     return (
         <>
-            <form action="#" className="signup_form" >
+            <form className="signup_form" >
                 <label htmlFor="">Name</label>
                 <input type="text" placeholder='Enter your Name'
                     onChange={(e) => setName(e.target.value)} />
@@ -166,7 +167,7 @@ const Signup = () => {
                     <input type={shwopass === true ? "text" : "password"} placeholder='Confirm Password'
                         onChange={(e) => setConfirmpass(e.target.value)}
                     />
-                    <button onClick={showPassword}>show</button>
+                    <button onClick={(e) => showPassword(e)}>show</button>
                 </div>
                 <label htmlFor="">Upload your Picture</label>
                 <input type="file"

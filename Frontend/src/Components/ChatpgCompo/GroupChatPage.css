@@ -1,0 +1,63 @@
+.group-name {
+    width: 100%;
+    height: 100vh;
+    border: 1px solid black;
+    /* background-color: red; */
+    position: absolute;
+    /* left: 550px; */
+    /* top: 150px; */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.group-profile-pic {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    align-self: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.group-profile-pic>img {
+    width: 200px;
+    height: 200px;
+}
+
+.group-name-input {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.group-name-input>input {
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+    font-size: 1em;
+}
+
+.check-icon {
+    width: 100%;
+    /* border: 1px solid black */
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    color: #8c52ff;
+}

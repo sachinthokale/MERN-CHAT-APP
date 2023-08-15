@@ -4,16 +4,22 @@
     /* border: 2px solid black; */
     margin: 5px;
     width: 90%;
+    height: 90%;
+    justify-self: flex-end;
+
+
+
 }
 
 .signup_form>label {
     font-weight: 400;
     padding: 8px;
+
 }
 
 .signup_form>input {
     background-color: #2732321b;
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
     margin-left: 8px;
     width: 90%;
     height: 25px;
@@ -60,5 +66,5 @@
 }
 
 .signup_form>button:hover {
-    background-color: #0d8a84;
+    background-color: #ff4f5a;
 }
